@@ -263,7 +263,7 @@ Public Class frmLoginOTP
 
                 smtp.Port = 587
                 smtp.EnableSsl = True
-                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "FIYINbecky@2102")
+                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "Your EMail Password")
 
                 smtp.Send(mail)
 
@@ -280,7 +280,7 @@ Public Class frmLoginOTP
 
                 smtp.Port = 25
                 smtp.EnableSsl = True
-                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "FIYINbecky@2102")
+                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "Your EMail Password")
 
                 smtp.Send(mail)
 
@@ -297,7 +297,7 @@ Public Class frmLoginOTP
 
                 smtp.Port = 587
                 smtp.EnableSsl = True
-                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "FIYINbecky@2102")
+                smtp.Credentials = New System.Net.NetworkCredential(SupportMail, "Your EMail Password")
 
                 smtp.Send(mail)
 
@@ -319,14 +319,14 @@ Public Class frmLoginOTP
 
 
     End Sub
-
+' using Ozeki sms gateway for sms testing
     Public Sub smsOTP(ByVal pass As String, ByVal ClientNo As Integer)
 
         Dim request As HttpWebRequest
         Dim response As HttpWebResponse = Nothing
         Dim url As String
         Dim username As String = "admin"
-        Dim password As String = "jidlekbim@2102"
+        Dim password As String = "password"
         Dim host As String = "http://127.0.0.1:9501"
         Dim originator As String = "09967469401"
         Dim body As String = "Your One Time Password is : " & pass

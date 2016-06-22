@@ -1,0 +1,13 @@
+-- Script Date: 6/22/2016 6:39 PM  - ErikEJ.SqlCeScripting version 3.5.2.58
+CREATE TABLE [tblOTP] (
+  [Id] int IDENTITY (1,1) NOT NULL
+, [Email] nvarchar(50) NOT NULL
+, [OTP] nvarchar(10) NOT NULL
+, [Valid] int NOT NULL
+, [Expire] int NOT NULL
+, [GenTime] datetime NOT NULL
+, [ExpTime] datetime NOT NULL
+);
+GO
+ALTER TABLE [tblOTP] ADD CONSTRAINT [PK_tblOTP] PRIMARY KEY ([Id]);
+GO
